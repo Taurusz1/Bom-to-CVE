@@ -1,0 +1,15 @@
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.csproj.AssemblyReference.cache
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.AssemblyInfoInputs.cache
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.AssemblyInfo.cs
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.csproj.CoreCompileInputs.cache
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\bin\Debug\net6.0\Bom-to-CVE.exe
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\bin\Debug\net6.0\Bom-to-CVE.deps.json
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\bin\Debug\net6.0\Bom-to-CVE.runtimeconfig.json
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\bin\Debug\net6.0\Bom-to-CVE.dll
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\bin\Debug\net6.0\Bom-to-CVE.pdb
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.dll
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\refint\Bom-to-CVE.dll
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.pdb
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.genruntimeconfig.cache
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\ref\Bom-to-CVE.dll

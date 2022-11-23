@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Bom-to-CVE": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\Bazsó\\Desktop\\5.félév\\Témalab\\boms\\PetriNet.xml"
+    }
+  }
+}
