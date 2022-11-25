@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UW/VGvkW2Pk6ABelflx52MSP1x7Mk47S5xYgOcyO4gvh/tB97RvPmhRBgSbRJuiJAKvrGLvdLeGiL3m8zscKZg==",
+  "dgSpecHash": "qPhwabDlsQs2Hpg6sN6nPyRfNDjmWCWEeCpXqDdivumqH/SDTKnIxhJMSy9xRrUpWoP2LiGV9LI+vhwEYHp2NQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bazsó\\source\\repos\\Bom-to-CVE\\Bom-to-CVE\\Bom-to-CVE.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Bazsó\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

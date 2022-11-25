@@ -13,3 +13,5 @@ C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\refint\Bom-t
 C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.pdb
 C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.genruntimeconfig.cache
 C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\ref\Bom-to-CVE.dll
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Bazsó\source\repos\Bom-to-CVE\Bom-to-CVE\obj\Debug\net6.0\Bom-to-CVE.csproj.CopyComplete
