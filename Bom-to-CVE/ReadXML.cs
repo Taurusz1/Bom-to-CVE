@@ -3,50 +3,69 @@ using Bom_to_CVE;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json;
-using System.Xml.Linq;
-using JsonSerializer = System.Text.Json.JsonSerializer;
-using System.Collections;
+using MongoDB.Driver;
 
 class ReadXML
 {
-    private static readonly JsonSerializerOptions _options =
-    new() { DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull };
-
+    private static readonly JsonSerializerOptions _options = new() { DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull };
+    private static Uri apiPath = new Uri("https://api.osv.dev/v1/query");
     static void Main(string[] args)
     {
 
         XmlDocument doc = new XmlDocument();
         doc.Load(args[0]);
-        XmlNodeList list = doc.GetElementsByTagName("name");
-        /**for (int i = 0; i < list.Count; i++){
-            Console.WriteLine(list[i].InnerText.ToString());
+        XmlNodeList nodeList = doc.GetElementsByTagName("name");
+        List<string> parsedNames = parseNodeList(nodeList);
+        //List<string> parsedNames = new List<string>();
+        //parsedNames.Add("NuGet.Commands");
+        /**Ha látni szeretnénk a kiolvasott csomagok neveit
+foreach (XmlNode node in nodeList){
+Console.WriteLine(node.InnerText.ToString());
+}*/
+        /**Ha látni szeretnénk a kiolvasott csomagok neveit
+        foreach (string name in parsedNames)
+        {
+            Console.WriteLine(name);
         }*/
 
+        var dbHelper = new MongoDBHelper();
+        for (int i = 0; i < parsedNames.Count; i++)
+        {
+            var result = Requester.GetCVE(apiPath, parsedNames[i]);
+            cveArray cve = JsonConvert.DeserializeObject<cveArray>(result);
+            cve.dependecy = parsedNames[i];
+            dbHelper.uploadData(cve);
+        }
+    }
 
-        var apiPath = new Uri("https://api.osv.dev/v1/query");
-        var result = Requester.GetCVE(apiPath);
+   public static List<string> parseNodeList(XmlNodeList nodeList)
+   {
+        List<string> result = new List<string>();
+        foreach (XmlNode node in nodeList)
+        {
+            if(node.InnerText.ToString() != "CycloneDX module for .NET" && node.InnerText.ToString() != "PetriTool")
+            {
+                var tmp = node.InnerText.ToString().Split(".");
+                result.Add(tmp[1]);
+            }
+        }
+        
+        return result;
+   }
+    
+    
+    //nem biztos hogy jó a string param
+    public static void printToFile(string result)
+    {
         var json = JsonConvert.DeserializeObject(result);
-        //Console.WriteLine(json.ToString());
-
-        /**
         var path = "C:\\Users\\Bazsó\\Desktop\\5.félév\\Témalab\\boms";
         var fileName = "\\CVE.json";
         FileStream outputStream = File.Create(path + fileName);
         File.WriteAllText("CVE.json", json.ToString());
-        */
-
-        cveArray cve = JsonConvert.DeserializeObject<cveArray>(result);
-        //for (int i = 0; i < cve.vulns.Length; i++)
-        //{
-        Console.WriteLine(cve.vulns[0].severity[0].score);
-        //Console.WriteLine(cve.vulns[0].id);
-        //Console.WriteLine();
-        //Console.WriteLine(cve.vulns[0].summary);
-        //Console.WriteLine(cve.vulns[0].affected);
-        //Console.WriteLine(cve.vulns[0].modified);
-        //Console.WriteLine(cve.vulns[0].aliases);
-        //Console.WriteLine(cve.vulns[0].database_specific);
-        //Console.WriteLine(cve.vulns[0].details);
-        //}
+    }
+    public static void printToStdout(string result)
+    {
+        var json = JsonConvert.DeserializeObject(result);
+        Console.WriteLine(json.ToString());
     }
 }

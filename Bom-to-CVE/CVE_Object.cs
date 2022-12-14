@@ -1,11 +1,12 @@
-﻿
-public class cveArray
+﻿public class cveArray
 {
     public Vuln[] vulns { get; set; }
+    public string dependecy { get; set; }
 }
 
 public class Vuln
 {
+
     public string id { get; set; }
     public string summary { get; set; }
     public string details { get; set; }
