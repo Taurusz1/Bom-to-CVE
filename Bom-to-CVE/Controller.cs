@@ -1,7 +1,7 @@
 ﻿using System.Xml;
 using Bom_to_CVE;
 using Newtonsoft.Json;
-//signed commit test
+//signed commit test 2
 class Controller
 {
     private static Uri apiPath = new Uri("https://api.osv.dev/v1/query");
